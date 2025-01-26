@@ -43,7 +43,7 @@ class GetPromptId:
         if seed:
             set_seed(self.hash_seed(seed))
         try:
-            local_ip=self.get_local_ip()
+            local_ip="127.0.0.1"
             port=self.get_local_port()
             url = f"http://{local_ip}:{port}/queue"
             response = requests.get(url)
